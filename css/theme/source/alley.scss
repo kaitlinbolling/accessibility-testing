@@ -1,0 +1,135 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@use "sass:color";
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$black-alley: #1c0d0d;
+$black: #000;
+$blue-light: #d7eef1;
+$bone: #f8f7f5;
+$brown: #655856;
+$gray: #ccc;
+$gray-lilac: #e2e8f0;
+$gray-alabaster: #fafafa;
+$gray-shark: #5c5c5c;
+$orange: #fc723d;
+$red-alley: #e55842;
+$red-dark: #b34534;
+$white: #fff;
+
+// Background of the presentation
+$backgroundColor: linear-gradient(to right bottom, $bone 0 50%, $white 50% 100%);
+
+// Primary/body text
+$mainFont: Inter, sans-serif;
+$mainColor: $black-alley;
+
+// Headings
+$headingFont: 'Playfair Display', serif;
+$headingColor: $mainColor;
+$headingFontWeight: 400;
+$headingTextTransform: none;
+
+// Links and actions
+$linkColor: $red-alley;
+$linkColorHover: $red-dark;
+
+// Text selection
+$selectionBackgroundColor: $linkColor;
+$selectionColor: #fff;
+
+hr {
+  border-color: $gray;
+  border-style: solid;
+  border-width: 1px 0 0;
+}
+
+h1 strong {
+  font-family: $mainFont;
+}
+
+.badge {
+  background-color: $red-alley;
+  border-radius: 0.25em;
+  color: $white;
+  display: inline-block;
+  font-family: $mainFont;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+h1 .badge {
+  display: block;
+  font-size: 0.25em;
+  margin-inline: auto;
+}
+
+.degree-of-impact .badge {
+  text-align: center;
+  width: 10rem;
+}
+
+.reveal table.violation-form {
+  tr {
+    border: 0 none;
+
+    &:nth-child(even) {
+      background-color: $bone;
+    }
+  }
+  td {
+    border: 1px solid $gray !important;
+  }
+}
+
+.subheadline {
+  color: $red-alley;
+  font-size: 1.25em;
+  font-weight: 800;
+}
+
+.text-small {
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.text-xsmall {
+  font-size: 0.55em;
+  font-weight: 400;
+}
+
+.img-rounded {
+  border-radius: 100%;
+  box-shadow: 6px 6px 0 8px $red-alley;
+}
+
+ul > li,
+ol > li {
+  margin-bottom: 0.5rem;
+}
+
+ol.report-format {
+  list-style: upper-roman !important;
+
+  ol {
+    font-size: 0.75em;
+    font-weight: 300;
+    list-style: upper-alpha !important;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>From Audit to Action: A Four Step Guide to Accessibility Testing</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/alley.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,457 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h1 class="r-fit-text">From <strong>Audit</strong> to <strong>Action</strong></h1>
+					<h2 class="r-fit-text">A Four-Step Guide to Accessibility Testing</h2>
+					<hr />
+					<div style="display: flex; text-align: left; font-size: 0.5em; justify-content: space-between;">
+						<p>Kaitlin Bolling • Director of UX Development at Alley</p>
+						<p>ColorCode: Buffalo 2025</p>
+					</div>
+					<aside class="notes">
+						Intro - excited to be here, from buffalo, etc.
+						<p>Hi everyone, I'm Kaitlin Bolling.</p>
+						<p>I'm from the WNY area -- I used to live right down the street actually. I recently moved to Orchard Park, which is just about 20 minutes south of here, with my husband and my dog, Roy.</p>
+					</aside>
+				</section>
+
+				<section>
+					<img class="img-rounded r-stretch" src="./images/roy.jpg" alt="A dog named Roy laying in the sunshine with a ball." />
+				</section>
+
+				<section>
+					<svg tabindex="-1" aria-hidden="true" viewBox="0 0 71 32" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path fill="#e55842" d="M68.85 9.385h-3.974v.718h1.307a.886.886 0 0 1 .825 1.203h.002l-2.812 7.49-3.472-7.463a.886.886 0 0 1 .817-1.23h.509v-.718h-8.555v.718h.926v.002a.883.883 0 0 1 .783.51h.003l6.726 14.21c-.693 2.029-1.966 4.445-3.21 4.96.031-.16.034-.242.034-.411a2.611 2.611 0 1 0-2.611 2.611c.049 0 .096-.004.145-.007l-.003.004c2.574 0 4.817-2.29 5.996-5.68v.003l6.067-15.636h.002a.884.884 0 0 1 .824-.566h.953v-.718H68.85zM5.21 22.242a2.605 2.605 0 1 1-5.21 0 2.605 2.605 0 0 1 5.21 0M37.445 23.74a.886.886 0 0 1-.886-.885V0h-6.733v.975h1.308c.49 0 .886.397.886.886v20.994c0 .49-.396.886-.886.886h-3.033a.886.886 0 0 1-.886-.886V0H20.482v.975h1.308c.49 0 .887.397.887.886v20.994c0 .49-.397.886-.887.886h-2.124v-.004a.882.882 0 0 1-.797-.586h-.002L10.74 1.676H8.205L6.793 6.834l3.38 8.686H4.414l-.33 1.208h6.56l2.247 5.782.013.034h-.002a.88.88 0 0 1 .059.31c0 .49-.397.887-.886.887H10.74v.718H38.771v-.718h-1.326z"></path><path fill="#e55842" d="M43.936 15.37c0-2.984 1.159-5.404 2.588-5.404 1.43 0 2.589 2.42 2.589 5.404v.15h-5.177v-.15zm9.036 5.418c-.93 1.403-2.357 2.302-3.956 2.302-2.803 0-5.075-2.755-5.08-6.157v-.205h9.715v-1.3c0-3.665-3.009-6.636-6.894-6.636-4.136 0-7.36 3.589-7.36 8.016v.33c0 4.245 3.036 7.686 7.315 7.686 3.319 0 5.628-1.453 6.94-3.634l-.68-.402z"></path></g></svg>
+					<aside class="notes">
+						<p>I have about 20 years of experience working in web development, and I primarily focus on frontend development, user experience, and digital accessibility.</p>
+						<p>I'm currently the Director of User Experience Development at Alley, where I have worked for almost 7 years.</p>
+						<p>Alley is a full-service digital agency that specializes in enterprise level WordPress development.</p>
+					</aside>
+				</section>
+
+				<section>
+					<h1><span class="badge">Step 1</span> Requirements Gathering</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p>Identify and define the requirements needed for the audit. This could include:</p>
+					<!-- Consider individual vertical slides for this list. -->
+					<ul class="text-small">
+						<li class="fragment">Audit Scope</li>
+						<li class="fragment">Conformance Level</li>
+						<li class="fragment">Evaluation Methods and Tools</li>
+						<li class="fragment">Specific terminology</li>
+						<li class="fragment">Specific device considerations</li>
+						<li class="fragment">Documented currently known areas of interest</li>
+						<li class="fragment">Deliverables and reports</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							1) Audit Scope
+							
+							Audits can range from a large detailed report that is very encompassing, or something much more targeted. Knowing the type of audit needed will help shape deliverables and scope. For example, does the whole site need an audit? Many sites? One section of a site? Is there a particular area of the site that needs extra attention?
+
+							After defining the scope, document a list of URLs that will be tested. These pages may include:
+							- All unique templates (ex: the homepage, an archive listing page, a post detail page, a content page)
+							- High-traffic pages
+							- Pages with complex or highly interactive elements, such as videos or forms
+
+							2) Conformance Level
+							Define conformance level, and make sure to note version number. WCAG is shipping new versions, and audits can be referenced or reviewed at later dates for a variety of reasons.
+							- WCAG A, AA, or AAA.
+							- Specify version (WCAG 2.2)
+							- https://www.w3.org/WAI/WCAG22/quickref/
+
+							3) Define evaluation tools and methods.
+							Any tools used to evaluate should be identified in some way.
+							- Automated testing tools
+							- Screen reader software
+							- Browsers: Identify any specific browsers and browser versions that may need to be supported.
+
+							4) Specific Terminology
+							Define specific terminology used in the report. Many times this is primarily adding context to what supported, non-supported, or partially supported means in reference to WCAG rule validation in the reports.
+
+							5) Note specific device considerations
+							Sometimes specific devices are used to employ more accessibility oriented software. If specific devices are used, having access to one or being able to reproduce the environment helps testing workflow.
+							
+							6) Document currently known areas of interest
+							If there are known challenges or areas of interest, make note for manual and automated testing. We can use more rigorous or manual testing for areas that need specific investigation.
+							
+							7) Define deliverables and reports
+							Identify needed deliverables and craft them to the audit and scope. Audits can include a number of documents, such as:
+							
+							- Overview statement or summary
+							- WCAG Conformance Report
+							- Design Mockups
+							- Specific Remediation Strategies
+							- VPAT (Voluntary Product Accessibility Template)
+
+							Craft deliverables to the scope.
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<h1><span class="badge">Step 2</span> Automated Testing</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">What is automated testing?</p>
+					<p class="text-small">Automated testing uses software tools to evaluate a website or application against a set of accessibility standards, such as WCAG.</p>
+					<p class="text-small">It is your first line of defense and can quicky identify many common accessibility violations.</p>
+					<div style="display: flex; gap: 3rem;">
+						<div class="fragment">
+							<p class="badge">Pros</p>
+							<ul class="text-small">
+								<li>Efficient</li>
+								<li>Consistent</li>
+								<li>Low barrier to entry</li>
+							</ul>
+						</div>
+						<div class="fragment">
+							<p class="badge">Cons</p>
+							<ul class="text-small">
+								<li>Only detects about 30-40% of all issues</li>
+								<li>Can't evaluate the quality or appropriateness of accessibility solutions</li>
+								<li>Struggles with dynamic content and state changes</li>
+							</ul>
+						</div>
+					</div>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							Pros:
+							- Efficient: Scans hundreds of pages quickly, and scales well for large websites and applications.
+							- Integrates easily into CI/CD pipelines for continuous accessibility monitoring
+							- Consistent: applies the same rules across your entire digital product which can be measured and tracked over time.
+							- Low barrier to entry: many tools are free or low-cost and can be run by people with limited accessibility knowledge
+							Cons: Can detect if an image has alt text, but not if it's actually meaningful.
+						</textarea>
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">How to Conduct Automated Testing</p>
+					<p class="text-small">There are many testing tools available. Choose the tools you are most comfortable with, and select at least two for the most comprehensive results.</p>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Automated Testing Tools</p>
+					<ul class="r-fit-text">
+						<li><a href="https://www.deque.com/axe/">Axe (by Deque Systems)</a> - Available as browser extension, API, and CLI tool</li>
+						<li><a href="https://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a> - Browser extension and online service</li>
+						<li><a href="https://developer.chrome.com/docs/lighthouse/overview">Lighthouse</a> - Built into Chrome DevTools with accessibility audit features</li>
+						<li><a href="https://pa11y.org/">Pa11y</a> - Command-line interface for automating accessibility tests</li>
+						<li><a href="https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?hl=en-US">IBM Equal Access Accessibility Checker</a> - Browser extension and automation tools</li>
+						<li><a href="https://www.siteimprove.com/integrations/browser-extensions/">Siteimprove Accessibility Checker</a> - Browser extension and platform</li>
+						<li><a href="https://chromewebstore.google.com/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en">ARC Toolkit</a> - Chrome extension for developers</li>
+						<li><a href="https://accesslint.com/">AccessLint</a> - GitHub integration for catching issues in pull requests</li>
+						<li><a href="https://accessibilityinsights.io/">Accessibility Insights (by Microsoft)</a> - Browser extensions with assessment workflows</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="./images/lighthouse-logo.svg" alt="Google Lighthouse report showing accessibility issues." /> 
+					<p class="subheadline">Google Lighthouse</p>
+					<div class="text-small fragment">
+						<ul>
+							<li>The Lighthouse Accessibility score is a weighted average of all accessibility audits.</li>
+							<li>Weighting is based on <a href="https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md">axe user impact assessments</a>.</li>
+							<li>Each accessibility audit is pass or fail.</li>
+							<li><a href="https://developer.chrome.com/docs/lighthouse/accessibility/scoring" data-preview-link>https://developer.chrome.com/docs/lighthouse/accessibility/scoring</a></li>
+						</ul>
+					</div>
+					<aside class="notes">
+						Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get points for partially passing an accessibility audit. For example, if some buttons on a page have accessible names, but others don't, the page gets a 0 for the Buttons do not have an accessible name audit.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./images/siteimprove.webp" alt="Siteimprove logo icon." width="100" />
+					<p class="subheadline">Siteimprove Accessibility Checker</p>
+					<div class="text-small fragment">
+						<ul>
+							<li>The score is a measure of how well the page perofrms against WCAG success criteria categorized by Level A, AA, or AAA conformance levels.</li>
+							<li><a href="https://www.siteimprove.com/toolkit/accessibility-checker/" data-preview-link>https://www.siteimprove.com/toolkit/accessibility-checker/</a></li>
+						</ul>
+					</div>
+					<aside class="notes">
+						Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get points for partially passing an accessibility audit. For example, if some buttons on a page have accessible names, but others don't, the page gets a 0 for the Buttons do not have an accessible name audit.
+					</aside>
+				</section>
+
+				<section>
+					<h1>DEMO</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1><span class="badge">Step 3</span> Manual Testing</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">What is manual testing?</p>
+					<p class="text-small">Manual accessibility testing involves human evaluators directly interacting with digital products to identify accessibility barriers that automated tools cannot detect.</p>
+					<p class="text-small">This process requires testers to simulate the experience of users with disabilities by using various assistive technologies.</p>
+					<div style="display: flex; gap: 3rem;">
+						<div class="fragment">
+							<p class="badge">Pros</p>
+							<ul class="text-xsmall">
+								<li>Identifies issues that automated tools cannot detect (60-70% of accessibility problems)</li>
+								<li>Evaluates the actual user experience rather than just code compliance</li>
+								<li>Identifies problems with dynamic content and state changes</li>
+							</ul>
+						</div>
+						<div class="fragment">
+							<p class="badge">Cons</p>
+							<ul class="text-xsmall">
+								<li>Time-intensive and resource-demanding</li>
+								<li>Subject to human error and inconsistency between testers</li>
+							</ul>
+						</div>
+					</div>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							...
+						</textarea>
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Keyboard Testing</p>
+					<div class="text-small">
+						<p>The primary goal of keyboard testing is to ensure that all interactive elements and functionality of a website or application can be accessed and operated using only a keyboard, without requiring a mouse or touch input. This is essential for users with motor disabilities, vision impairments, or those who rely on assistive technologies that emulate keyboard input.</p>
+					</div>
+				</section>
+				
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Standard keyboard controls</p>
+					<ul class="text-xsmall">
+						<li><strong>Tab</strong> key to move forward through interactive elements</li>
+						<li><strong>Shift+Tab</strong> to move backward</li>
+						<li><strong>Enter/Space</strong> to activate buttons and links</li>
+						<li><strong>Arrow keys</strong> for menus, radio buttons, and sliders</li>
+						<li><strong>Escape</strong> for closing dialogs or canceling actions</li>
+					</ul>
+				</section>
+				
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Considerations</p>
+					<ul class="text-xsmall">
+						<li>Focus visibility</li>
+						<li>Tab order</li>
+						<li>Keyboard traps</li>
+						<li>Skip links</li>
+						<li>Access to all functionality</li>
+						<li>Custom widgets</li>
+						<li>Modal dialogs</li>
+						<li>Hidden content</li>
+						<li>Focus management</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							- Focus visibility: Is it always clear which element has keyboard focus?
+							- Tab order: Does the navigation sequence follow a logical, predictable path?
+							- Keyboard traps: Are there any places where you can't tab away from an element?
+							- Skip links: Are mechanisms available to bypass repetitive navigation?
+							- Access to all functionality: Can every feature be used without a mouse?
+							- Custom widgets: Do complex components (dropdowns, date pickers, etc.) work with keyboard controls?
+							- Modal dialogs: Can you properly enter, use, and exit modal windows?
+							- Hidden content: Can expandable sections be opened and closed with the keyboard?
+							- Focus management: Does focus move appropriately when content changes?
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+						Keyboard testing:
+						- Console: document.activeElement to follow focused element.
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Screen Reader Testing</p>
+					<div class="text-xsmall">
+						...
+					</div>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							Different screen readers - https://webaim.org/projects/screenreadersurvey10/#browsercombos
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<p class="subheadline">VoiceOver</p>
+					<ul class="text-small">
+						<li>Apple's built-in screen reader</li>
+						<li>Works best with Safari</li>
+						<li>Settings > Accessibility > VoiceOver Utility</li>
+						<li>Start with: <code>Command + F5</code></li>
+						<li>Cheatsheets:
+							<ul>
+								<li><a href="https://media.dequeuniversity.com/en/docs/screen-readers-and-input-methods/voiceover-macos-guide.pdf">deque Quick Reference Guide: macOS Keyboard Commands</a></li>
+								<li><a href="https://help.apple.com/voiceover/command-charts/">Apple VoiceOver Command Charts</a></li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+				
+				<section>
+					<h1><span class="badge">Step 4</span> Reporting</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p>Compile accessibility testing results into a report that <strong>summarizes findings, details violations, and suggests remediation strategies</strong> with the goal of <strong>making remediation as easy as possible.</strong></p>
+					<p class="fragment">The final deliverable should be thorough but easy to understand, and should help <strong>inform the prioritization</strong> of any remediation suggestions.</p>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Suggested Report Format</p>
+					<ol class="report-format text-small">
+						<li class="fragment">Table of Contents</li>
+						<li class="fragment">Introduction/Executive Summary</li>
+						<li class="fragment">Violations snapshot (optional)
+							<ol>
+								<li>Violations by severity</li>
+								<li>Violations by conformance level</li>
+								<li>Defect clusters </li>
+							</ol>
+						</li>
+						<li class="fragment">Background
+							<ol>
+								<li>Pages tested</li>
+								<li>Platforms and tools</li>
+								<li>Conformance level(s) tested </li>
+								<li>Exceptions</li>
+							</ol>
+						</li>
+						<li class="fragment">Violations</li>
+					</ol>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							The format of this report can vary depending on the audience. Here is a suggested report format.
+						</textarea>
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Violation form template</p>
+					<table class="text-xsmall violation-form">
+						<tr>
+							<td>ID</td>
+							<td>Unique identifier for referencing this violation (e.g., V1, V2, V3)</td>
+						</tr>
+						<tr>
+							<td>Violation</td>
+							<td>General description of the violation</td>
+						</tr>
+						<tr>
+							<td>Appears on</td>
+							<td>Pages / templates on which the violation is experienced</td>
+						</tr>
+						<tr>
+							<td>WCAG criteria & level</td>
+							<td>The relevant Web Content Accessibility Guidelines success criteria and conformance level</td>
+						</tr>
+						<tr>
+							<td>Description</td>
+							<td>Details about the specific violation</td>
+						</tr>
+						<tr>
+							<td>Severity level</td>
+							<td>Degree of impact</td>
+						</tr>
+						<tr>
+							<td>Impact</td>
+							<td>How this violation can affect users with disabilities</td>
+						</tr>
+						<tr>
+							<td>Remediation</td>
+							<td>Suggestions for resolving the violation</td>
+						</tr>
+					</table>
+
+
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							...
+						</textarea>
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Degree of Impact</p>
+					<div class="text-xsmall degree-of-impact">
+						<p><span class="badge">Critical</span> The issue results in blocked content for individuals with disabilities. Until a solution is implemented, content will be completely inaccessible, making the organization highly vulnerable to legal action. Remediation should be top priority.</p>
+						<p><span class="badge">Serious</span> The issue results in serious barriers for people with disabilities. Until a solution is implemented, some content will be inaccessible, making the organization vulnerable to legal action. Users relying on AT will experience a significant frustration when attempting to access content. Remediation should be a priority.</p>
+						<p><span class="badge">Moderate</span> This issue results in some barriers for individuals with disabilities but would not prevent them from accessing fundamental elements or content. This might make the organization vulnerable to legal action. The violation must be resolved before a page can be considered fully compliant.</p>
+						<p><span class="badge">Minor</span> This is considered an issue that yields less impact for users than a moderate issue. For a page to be considered fully compliant this issue must be resolved but can be dealt with last</p>
+					</div>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							<p>Specifying the severity level helps you determine which issues get resolved first.</p>
+						</textarea>
+					</aside>
+				</section>
+
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
+					<p class="subheadline">Tips</p>
+					<ul class="text-small">
+						<li>Document violations in a form as you go. Include screenshots. Very brief videos can help demonstrate violations that involve interaction(s).</li>
+						<li>Violations should be grouped so that each violation should only be reported once, along with notes on where it appears.</li>
+						<li>If there are multiple ways to remediate a violation, suggest the less disruptive one - that is, the solution that is less likely to cause regressions.</li>
+						<li>Consider taking a course through Deque University to fill in any knowledge gaps and refine your skills.</li>
+					</ul>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							...
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<p class="subheadline">Accessibility Audit Reporting Software</p>
+					<ul>
+						<li><a href="https://beinclusive.app/">Be Inclusive - beinclusive.app</a></li>
+						<li><a href="https://www.caat.report/en">CAAT - caat.report</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Thank you!</h1>
+					<div style="display: flex; gap: 3rem;" class="text-xsmall">
+						<p>
+							<img src="./images/presentation-qr-code.svg" alt="QR code for presentation link." width="200" /><br />
+							Presentation:<br />
+							<a href="https://github.com/kaitlinbolling/accessibility-testing">https://github.com/kaitlinbolling/accessibility-testing</a>
+						</p>
+						<p>PDF: <a href="https://github.com/kaitlinbolling/accessibility-testing">https://github.com/kaitlinbolling/accessibility-testing</a></p>
+					</div>
+				</section>
+
 			</div>
 		</div>
 
