@@ -25,24 +25,26 @@
 						<p>Kaitlin Bolling • Director of UX Development at Alley</p>
 						<p>ColorCode: Buffalo 2025</p>
 					</div>
-					<aside class="notes">
-						Intro - excited to be here, from buffalo, etc.
-						<p>Hi everyone, I'm Kaitlin Bolling.</p>
-						<p>I'm from the WNY area -- I used to live right down the street actually. I recently moved to Orchard Park, which is just about 20 minutes south of here, with my husband and my dog, Roy.</p>
-					</aside>
 				</section>
 
 				<section>
 					<img class="img-rounded r-stretch" src="./images/roy.jpg" alt="A dog named Roy laying in the sunshine with a ball." />
+					<aside class="notes">
+						<p>I have about 20 years of experience working in web development, and I primarily focus on frontend development, user experience, and digital accessibility.</p>
+					</aside>
 				</section>
 
 				<section>
 					<svg tabindex="-1" aria-hidden="true" viewBox="0 0 71 32" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path fill="#e55842" d="M68.85 9.385h-3.974v.718h1.307a.886.886 0 0 1 .825 1.203h.002l-2.812 7.49-3.472-7.463a.886.886 0 0 1 .817-1.23h.509v-.718h-8.555v.718h.926v.002a.883.883 0 0 1 .783.51h.003l6.726 14.21c-.693 2.029-1.966 4.445-3.21 4.96.031-.16.034-.242.034-.411a2.611 2.611 0 1 0-2.611 2.611c.049 0 .096-.004.145-.007l-.003.004c2.574 0 4.817-2.29 5.996-5.68v.003l6.067-15.636h.002a.884.884 0 0 1 .824-.566h.953v-.718H68.85zM5.21 22.242a2.605 2.605 0 1 1-5.21 0 2.605 2.605 0 0 1 5.21 0M37.445 23.74a.886.886 0 0 1-.886-.885V0h-6.733v.975h1.308c.49 0 .886.397.886.886v20.994c0 .49-.396.886-.886.886h-3.033a.886.886 0 0 1-.886-.886V0H20.482v.975h1.308c.49 0 .887.397.887.886v20.994c0 .49-.397.886-.887.886h-2.124v-.004a.882.882 0 0 1-.797-.586h-.002L10.74 1.676H8.205L6.793 6.834l3.38 8.686H4.414l-.33 1.208h6.56l2.247 5.782.013.034h-.002a.88.88 0 0 1 .059.31c0 .49-.397.887-.886.887H10.74v.718H38.771v-.718h-1.326z"></path><path fill="#e55842" d="M43.936 15.37c0-2.984 1.159-5.404 2.588-5.404 1.43 0 2.589 2.42 2.589 5.404v.15h-5.177v-.15zm9.036 5.418c-.93 1.403-2.357 2.302-3.956 2.302-2.803 0-5.075-2.755-5.08-6.157v-.205h9.715v-1.3c0-3.665-3.009-6.636-6.894-6.636-4.136 0-7.36 3.589-7.36 8.016v.33c0 4.245 3.036 7.686 7.315 7.686 3.319 0 5.628-1.453 6.94-3.634l-.68-.402z"></path></g></svg>
 					<aside class="notes">
-						<p>I have about 20 years of experience working in web development, and I primarily focus on frontend development, user experience, and digital accessibility.</p>
 						<p>I'm currently the Director of User Experience Development at Alley, where I have worked for almost 7 years.</p>
 						<p>Alley is a full-service digital agency that specializes in enterprise level WordPress development.</p>
 					</aside>
+				</section>
+
+				<section>
+					Why a11y audits?
+
 				</section>
 
 				<section>
@@ -56,7 +58,7 @@
 					<!-- Consider individual vertical slides for this list. -->
 					<ul class="text-small">
 						<li class="fragment">Audit Scope</li>
-						<li class="fragment">Conformance Level</li>
+						<li class="fragment">Conformance Level (ex: WCAG AA 2.2)</li>
 						<li class="fragment">Evaluation Methods and Tools</li>
 						<li class="fragment">Specific terminology</li>
 						<li class="fragment">Specific device considerations</li>
@@ -65,6 +67,7 @@
 					</ul>
 					<aside class="notes" data-markdown>
 						<textarea data-template>
+							Your goal is to identify and define the requirements needed for the audit. This could include:
 							1) Audit Scope
 							
 							Audits can range from a large detailed report that is very encompassing, or something much more targeted. Knowing the type of audit needed will help shape deliverables and scope. For example, does the whole site need an audit? Many sites? One section of a site? Is there a particular area of the site that needs extra attention?
@@ -75,36 +78,39 @@
 							- Pages with complex or highly interactive elements, such as videos or forms
 
 							2) Conformance Level
-							Define conformance level, and make sure to note version number. WCAG is shipping new versions, and audits can be referenced or reviewed at later dates for a variety of reasons.
+							
+							Define WCAG conformance level, and make sure to note version number. WCAG is the Web Content Accessibility Guidelines, and is the standard for accessibility. The conformance level can be defined as:
 							- WCAG A, AA, or AAA.
 							- Specify version (WCAG 2.2)
 							- https://www.w3.org/WAI/WCAG22/quickref/
 
-							3) Define evaluation tools and methods.
-							Any tools used to evaluate should be identified in some way.
+							3) Evaluation Methods and Tools
+							
+							Define evaluation methods and tools you plan to use, including:
 							- Automated testing tools
 							- Screen reader software
 							- Browsers: Identify any specific browsers and browser versions that may need to be supported.
 
 							4) Specific Terminology
-							Define specific terminology used in the report. Many times this is primarily adding context to what supported, non-supported, or partially supported means in reference to WCAG rule validation in the reports.
+							
+							Define specific terminology used in the report.
 
 							5) Note specific device considerations
+							
 							Sometimes specific devices are used to employ more accessibility oriented software. If specific devices are used, having access to one or being able to reproduce the environment helps testing workflow.
 							
 							6) Document currently known areas of interest
-							If there are known challenges or areas of interest, make note for manual and automated testing. We can use more rigorous or manual testing for areas that need specific investigation.
+							
+							If there are known challenges or areas of interest, make note for manual and automated testing. You can use more rigorous or manual testing for areas that need specific investigation.
 							
 							7) Define deliverables and reports
+							
 							Identify needed deliverables and craft them to the audit and scope. Audits can include a number of documents, such as:
 							
 							- Overview statement or summary
 							- WCAG Conformance Report
 							- Design Mockups
 							- Specific Remediation Strategies
-							- VPAT (Voluntary Product Accessibility Template)
-
-							Craft deliverables to the scope.
 						</textarea>
 					</aside>
 				</section>
@@ -144,7 +150,11 @@
 							- Integrates easily into CI/CD pipelines for continuous accessibility monitoring
 							- Consistent: applies the same rules across your entire digital product which can be measured and tracked over time.
 							- Low barrier to entry: many tools are free or low-cost and can be run by people with limited accessibility knowledge
-							Cons: Can detect if an image has alt text, but not if it's actually meaningful.
+							
+							Cons:
+							- Only detects about 30-40% of all issues
+							- Can't evaluate the quality or appropriateness of accessibility solutions. For example, it can detect if an image has alt text, but not if it's actually meaningful.
+							- Struggles with dynamic content and state changes in more complex applications
 						</textarea>
 					</aside>
 				</section>
@@ -157,16 +167,23 @@
 				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
 					<p class="subheadline">Automated Testing Tools</p>
 					<ul class="r-fit-text">
+						<li><a href="https://accessibilityinsights.io/">Accessibility Insights (by Microsoft)</a> - Browser extensions with assessment workflows</li>
+						<li><a href="https://accesslint.com/">AccessLint</a> - GitHub integration for catching issues in pull requests</li>
+						<li><a href="https://chromewebstore.google.com/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en">ARC Toolkit</a> - Chrome extension for developers</li>
 						<li><a href="https://www.deque.com/axe/">Axe (by Deque Systems)</a> - Available as browser extension, API, and CLI tool</li>
-						<li><a href="https://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a> - Browser extension and online service</li>
+						<li><a href="https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?hl=en-US">IBM Equal Access Accessibility Checker</a> - Browser extension and automation tools</li>
 						<li><a href="https://developer.chrome.com/docs/lighthouse/overview">Lighthouse</a> - Built into Chrome DevTools with accessibility audit features</li>
 						<li><a href="https://pa11y.org/">Pa11y</a> - Command-line interface for automating accessibility tests</li>
-						<li><a href="https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?hl=en-US">IBM Equal Access Accessibility Checker</a> - Browser extension and automation tools</li>
 						<li><a href="https://www.siteimprove.com/integrations/browser-extensions/">Siteimprove Accessibility Checker</a> - Browser extension and platform</li>
-						<li><a href="https://chromewebstore.google.com/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en">ARC Toolkit</a> - Chrome extension for developers</li>
-						<li><a href="https://accesslint.com/">AccessLint</a> - GitHub integration for catching issues in pull requests</li>
-						<li><a href="https://accessibilityinsights.io/">Accessibility Insights (by Microsoft)</a> - Browser extensions with assessment workflows</li>
+						<li><a href="https://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a> - Browser extension and online service</li>
 					</ul>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							Here's a list of some automated testing tools and I know of, and there are probably many more. Most of these are available as browser extensions, but some are services. I recommend testing a few of them to see what you like.
+
+							I'm going demonstrate two of these today. The first is Google Lighthouse.
+						</textarea>
+					</aside>
 				</section>
 
 				<section>
@@ -175,13 +192,20 @@
 					<div class="text-small fragment">
 						<ul>
 							<li>The Lighthouse Accessibility score is a weighted average of all accessibility audits.</li>
-							<li>Weighting is based on <a href="https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md">axe user impact assessments</a>.</li>
+							<li>Weighting is based on <a href="https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md">axe user impact assessments</a> by <em>deque</em>.</li>
 							<li>Each accessibility audit is pass or fail.</li>
-							<li><a href="https://developer.chrome.com/docs/lighthouse/accessibility/scoring" data-preview-link>https://developer.chrome.com/docs/lighthouse/accessibility/scoring</a></li>
+							<li><a href="https://developer.chrome.com/docs/lighthouse/accessibility/scoring">More on the Lighthouse accessibility score</a></li>
 						</ul>
 					</div>
-					<aside class="notes">
-						Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get points for partially passing an accessibility audit. For example, if some buttons on a page have accessible names, but others don't, the page gets a 0 for the Buttons do not have an accessible name audit.
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							I'm sure a lot of you have used Lighthouse to test performance on your site. It's built right into Chrome DevTools which is convenient, and you can also run Lighthouse as part of PageSpeed Insights, from the command line, or as a Node module. 
+
+							Here's a few things to know when using Lighthouse to test for accessibility specifically.
+							- The Lighthouse Accessibility score is a weighted average of all accessibility audits.
+							- Weighting is based on axe user impact assessments. Axe is a suite of a11y testing tools by deque systems, who is a leading provider of digital accessibility solutions.
+							- Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get points for partially passing an accessibility audit. For example, if some buttons on a page have accessible names, but others don't, the page gets a 0 for the Buttons do not have an accessible name audit.
+						</textarea>
 					</aside>
 				</section>
 
@@ -190,8 +214,8 @@
 					<p class="subheadline">Siteimprove Accessibility Checker</p>
 					<div class="text-small fragment">
 						<ul>
-							<li>The score is a measure of how well the page perofrms against WCAG success criteria categorized by Level A, AA, or AAA conformance levels.</li>
-							<li><a href="https://www.siteimprove.com/toolkit/accessibility-checker/" data-preview-link>https://www.siteimprove.com/toolkit/accessibility-checker/</a></li>
+							<li>The score is a measure of how well the page performs against WCAG success criteria categorized by Level A, AA, or AAA conformance levels.</li>
+							<li><a href="https://www.siteimprove.com/toolkit/accessibility-checker/">https://www.siteimprove.com/toolkit/accessibility-checker/</a></li>
 						</ul>
 					</div>
 					<aside class="notes">
@@ -201,7 +225,19 @@
 
 				<section>
 					<h1>DEMO</h1>
-					<aside class="notes">
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							plumguide.com
+
+							Incognito mode recommended
+
+							Chrome DevTools:
+							- Accessibility Tree view
+							- Accessibility panel: Attributes
+							- CMD + Shift + P: Open the command panel and run a command
+							- Emulate light/dark mode
+							- Emulate prefers reduced motion (colorcode.events)
+						</textarea>
 					</aside>
 				</section>
 
@@ -242,7 +278,8 @@
 				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
 					<p class="subheadline">Keyboard Testing</p>
 					<div class="text-small">
-						<p>The primary goal of keyboard testing is to ensure that all interactive elements and functionality of a website or application can be accessed and operated using only a keyboard, without requiring a mouse or touch input. This is essential for users with motor disabilities, vision impairments, or those who rely on assistive technologies that emulate keyboard input.</p>
+						<p>The primary goal of keyboard testing is to ensure that all interactive elements and functionality of a website or application can be accessed and operated using only a keyboard, without requiring a mouse or touch input.</p>
+						<p>This is essential for users with motor disabilities, vision impairments, or those who rely on assistive technologies that emulate keyboard input.</p>
 					</div>
 				</section>
 				
@@ -275,7 +312,7 @@
 							- Focus visibility: Is it always clear which element has keyboard focus?
 							- Tab order: Does the navigation sequence follow a logical, predictable path?
 							- Keyboard traps: Are there any places where you can't tab away from an element?
-							- Skip links: Are mechanisms available to bypass repetitive navigation?
+							- Skip links: Are mechanisms available to bypass repetitive navigation? According to the Webaim report, 13.7% of home pages had a "skip" link present. One out of every ten "skip" links were broken—either they were hidden in a way that made them inaccessible or the link target was not present in the page.
 							- Access to all functionality: Can every feature be used without a mouse?
 							- Custom widgets: Do complex components (dropdowns, date pickers, etc.) work with keyboard controls?
 							- Modal dialogs: Can you properly enter, use, and exit modal windows?
@@ -290,17 +327,25 @@
 					<aside class="notes">
 						Keyboard testing:
 						- Console: document.activeElement to follow focused element.
+						- Enable System-Wide Keyboard Accessibility: https://dequeuniversity.com/mac/keyboard-access-mac
 					</aside>
 				</section>
 
 				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
 					<p class="subheadline">Screen Reader Testing</p>
 					<div class="text-xsmall">
-						...
+						<p>Screen readers are assistive technology software that converts digital content into synthesized speech or braille output for people who are blind or have low vision.</p>
+						<p>Popular screen readers:</p>
+						<ul>
+							<li>JAWS and NVDA (Windows)</li>
+							<li>VoiceOver (Mac/iOS)</li>
+							<li>TalkBack (Android)</li>
+							<li>Orca (Linux)</li>
+						</ul>
+						<p><a href="https://webaim.org/projects/screenreadersurvey10/#browsercombos">Most common screen reader and browser combinations</a></p>
 					</div>
 					<aside class="notes" data-markdown>
 						<textarea data-template>
-							Different screen readers - https://webaim.org/projects/screenreadersurvey10/#browsercombos
 						</textarea>
 					</aside>
 				</section>
@@ -420,10 +465,10 @@
 				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
 					<p class="subheadline">Degree of Impact</p>
 					<div class="text-xsmall degree-of-impact">
-						<p><span class="badge">Critical</span> The issue results in blocked content for individuals with disabilities. Until a solution is implemented, content will be completely inaccessible, making the organization highly vulnerable to legal action. Remediation should be top priority.</p>
-						<p><span class="badge">Serious</span> The issue results in serious barriers for people with disabilities. Until a solution is implemented, some content will be inaccessible, making the organization vulnerable to legal action. Users relying on AT will experience a significant frustration when attempting to access content. Remediation should be a priority.</p>
-						<p><span class="badge">Moderate</span> This issue results in some barriers for individuals with disabilities but would not prevent them from accessing fundamental elements or content. This might make the organization vulnerable to legal action. The violation must be resolved before a page can be considered fully compliant.</p>
-						<p><span class="badge">Minor</span> This is considered an issue that yields less impact for users than a moderate issue. For a page to be considered fully compliant this issue must be resolved but can be dealt with last</p>
+						<p class="fragment"><span class="badge">Critical</span> The issue results in blocked content for individuals with disabilities. Until a solution is implemented, content will be completely inaccessible, making the organization highly vulnerable to legal action. Remediation should be top priority.</p>
+						<p class="fragment"><span class="badge">Serious</span> The issue results in serious barriers for people with disabilities. Until a solution is implemented, some content will be inaccessible, making the organization vulnerable to legal action. Users relying on AT will experience a significant frustration when attempting to access content. Remediation should be a priority.</p>
+						<p class="fragment"><span class="badge">Moderate</span> This issue results in some barriers for individuals with disabilities but would not prevent them from accessing fundamental elements or content. This might make the organization vulnerable to legal action. The violation must be resolved before a page can be considered fully compliant.</p>
+						<p class="fragment"><span class="badge">Minor</span> This is considered an issue that yields less impact for users than a moderate issue. For a page to be considered fully compliant this issue must be resolved but can be dealt with last.</p>
 					</div>
 					<aside class="notes" data-markdown>
 						<textarea data-template>
@@ -447,7 +492,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section style="text-align: left;" data-background-gradient="linear-gradient(to bottom, #f8f7f5, #fff)">
 					<p class="subheadline">Accessibility Audit Reporting Software</p>
 					<ul>
 						<li><a href="https://beinclusive.app/">Be Inclusive - beinclusive.app</a></li>
@@ -456,15 +501,21 @@
 				</section>
 
 				<section>
+					<ol class="checkmarks">
+						<li class="fragment">Requirements Gathering</li>
+						<li class="fragment">Automated Testing</li>
+						<li class="fragment">Manual Testing</li>
+						<li class="fragment">Reporting</li>
+						<li class="fragment last">✨ User Testing ✨</li>
+					</ol>
+				</section>
+
+				<section>
 					<h1>Thank you!</h1>
-					<div style="display: flex; gap: 3rem;" class="text-xsmall">
-						<p>
-							<img src="./images/presentation-qr-code.svg" alt="QR code for presentation link." width="200" /><br />
-							Presentation:<br />
-							<a href="https://github.com/kaitlinbolling/accessibility-testing">https://github.com/kaitlinbolling/accessibility-testing</a>
-						</p>
-						<p>PDF: <a href="https://github.com/kaitlinbolling/accessibility-testing">https://github.com/kaitlinbolling/accessibility-testing</a></p>
-					</div>
+					<br />
+					<p class="text-small">
+						Slides: <strong><a href="https://github.com/kaitlinbolling/accessibility-testing">https://github.com/kaitlinbolling/accessibility-testing</a></strong>
+					</p>
 				</section>
 
 			</div>

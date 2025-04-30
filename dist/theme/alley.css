@@ -82,6 +82,29 @@ ol.report-format ol {
   list-style: upper-alpha !important;
 }
 
+.checkmarks > li {
+  align-items: center;
+  display: flex;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
+  gap: 2rem;
+  list-style: none;
+}
+
+.checkmarks > li::before {
+  background: url("../../images/checkbox.svg") no-repeat center;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 60px;
+  width: 60px;
+}
+
+.checkmarks > li.last::before {
+  background: none;
+  box-shadow: inset 0 0 0 4px #e55842;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
