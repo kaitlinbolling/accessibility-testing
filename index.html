@@ -36,15 +36,21 @@
 
 				<section>
 					<svg tabindex="-1" aria-hidden="true" viewBox="0 0 71 32" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path fill="#e55842" d="M68.85 9.385h-3.974v.718h1.307a.886.886 0 0 1 .825 1.203h.002l-2.812 7.49-3.472-7.463a.886.886 0 0 1 .817-1.23h.509v-.718h-8.555v.718h.926v.002a.883.883 0 0 1 .783.51h.003l6.726 14.21c-.693 2.029-1.966 4.445-3.21 4.96.031-.16.034-.242.034-.411a2.611 2.611 0 1 0-2.611 2.611c.049 0 .096-.004.145-.007l-.003.004c2.574 0 4.817-2.29 5.996-5.68v.003l6.067-15.636h.002a.884.884 0 0 1 .824-.566h.953v-.718H68.85zM5.21 22.242a2.605 2.605 0 1 1-5.21 0 2.605 2.605 0 0 1 5.21 0M37.445 23.74a.886.886 0 0 1-.886-.885V0h-6.733v.975h1.308c.49 0 .886.397.886.886v20.994c0 .49-.396.886-.886.886h-3.033a.886.886 0 0 1-.886-.886V0H20.482v.975h1.308c.49 0 .887.397.887.886v20.994c0 .49-.397.886-.887.886h-2.124v-.004a.882.882 0 0 1-.797-.586h-.002L10.74 1.676H8.205L6.793 6.834l3.38 8.686H4.414l-.33 1.208h6.56l2.247 5.782.013.034h-.002a.88.88 0 0 1 .059.31c0 .49-.397.887-.886.887H10.74v.718H38.771v-.718h-1.326z"></path><path fill="#e55842" d="M43.936 15.37c0-2.984 1.159-5.404 2.588-5.404 1.43 0 2.589 2.42 2.589 5.404v.15h-5.177v-.15zm9.036 5.418c-.93 1.403-2.357 2.302-3.956 2.302-2.803 0-5.075-2.755-5.08-6.157v-.205h9.715v-1.3c0-3.665-3.009-6.636-6.894-6.636-4.136 0-7.36 3.589-7.36 8.016v.33c0 4.245 3.036 7.686 7.315 7.686 3.319 0 5.628-1.453 6.94-3.634l-.68-.402z"></path></g></svg>
-					<aside class="notes">
-						<p>I'm currently the Director of User Experience Development at Alley, where I have worked for almost 7 years.</p>
-						<p>Alley is a full-service digital agency that specializes in enterprise level WordPress development.</p>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							I'm currently the Director of User Experience Development at Alley, where I have worked for almost 7 years.
+						
+							Alley is a full-service digital agency that specializes in enterprise level WordPress development.
+
+							While at Alley, we occassionally would have clients ask us how accessible their site is. Maybe they had questions from users, maybe they were trying to improve performance or SEO, or maybe they were just trying to not get sued.
+							
+							In any case, we realized we didn't have a proper process for evaluating the accessibility of a site. We all had our own individual methods and standards and ideas.
+
+							So, we decided to form a task force to create a guide that all developers could follow. We eventually broke out the audit process into four steaps, and even wrote Jira ticket templates for each step so that teams could easily clone them into their sprints.
+
+							In my talk today I'd like to introduce you to those steps in order to hopefuly inspire and empower you conduct audits on the sites you work on.
+						</textarea>
 					</aside>
-				</section>
-
-				<section>
-					Why a11y audits?
-
 				</section>
 
 				<section>
@@ -60,7 +66,6 @@
 						<li class="fragment">Audit Scope</li>
 						<li class="fragment">Conformance Level (ex: WCAG AA 2.2)</li>
 						<li class="fragment">Evaluation Methods and Tools</li>
-						<li class="fragment">Specific terminology</li>
 						<li class="fragment">Specific device considerations</li>
 						<li class="fragment">Documented currently known areas of interest</li>
 						<li class="fragment">Deliverables and reports</li>
@@ -68,7 +73,7 @@
 					<aside class="notes" data-markdown>
 						<textarea data-template>
 							Your goal is to identify and define the requirements needed for the audit. This could include:
-							1) Audit Scope
+							1. Audit Scope
 							
 							Audits can range from a large detailed report that is very encompassing, or something much more targeted. Knowing the type of audit needed will help shape deliverables and scope. For example, does the whole site need an audit? Many sites? One section of a site? Is there a particular area of the site that needs extra attention?
 
@@ -77,33 +82,29 @@
 							- High-traffic pages
 							- Pages with complex or highly interactive elements, such as videos or forms
 
-							2) Conformance Level
+							1. Conformance Level
 							
 							Define WCAG conformance level, and make sure to note version number. WCAG is the Web Content Accessibility Guidelines, and is the standard for accessibility. The conformance level can be defined as:
 							- WCAG A, AA, or AAA.
 							- Specify version (WCAG 2.2)
 							- https://www.w3.org/WAI/WCAG22/quickref/
 
-							3) Evaluation Methods and Tools
+							1. Evaluation Methods and Tools
 							
 							Define evaluation methods and tools you plan to use, including:
 							- Automated testing tools
 							- Screen reader software
 							- Browsers: Identify any specific browsers and browser versions that may need to be supported.
 
-							4) Specific Terminology
-							
-							Define specific terminology used in the report.
-
-							5) Note specific device considerations
+							1. Note specific device considerations
 							
 							Sometimes specific devices are used to employ more accessibility oriented software. If specific devices are used, having access to one or being able to reproduce the environment helps testing workflow.
 							
-							6) Document currently known areas of interest
+							1. Document currently known areas of interest
 							
 							If there are known challenges or areas of interest, make note for manual and automated testing. You can use more rigorous or manual testing for areas that need specific investigation.
 							
-							7) Define deliverables and reports
+							1. Define deliverables and reports
 							
 							Identify needed deliverables and craft them to the audit and scope. Audits can include a number of documents, such as:
 							
@@ -219,7 +220,9 @@
 						</ul>
 					</div>
 					<aside class="notes">
-						Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get points for partially passing an accessibility audit. For example, if some buttons on a page have accessible names, but others don't, the page gets a 0 for the Buttons do not have an accessible name audit.
+						This is a tool that is also available as a browser extension.
+
+						It provides a score that is a measure of how well the page performs against WCAG success criteria categorized by Level A, AA, or AAA conformance levels.
 					</aside>
 				</section>
 
@@ -531,6 +534,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				loop: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
